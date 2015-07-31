@@ -9,14 +9,16 @@
 |_____/_/\_\ .__/|_|  \___||___/___/  \____|____/  \_/   
            |_|                                           
 ```
-
+ 
+  轉出 csv 但是用 excel 打開中文卻是亂碼，那就試試看這隻吧
+  
   Express CSV provides response CSV easily to [Express](http://expressjs.com/).
 
 ## Installation
 
 npm:
 
-    $ npm install express-csv
+    $ npm install --save git+https://github.com/finpo/express-csv-big5.git
 
 ## Usage
 
@@ -24,11 +26,11 @@ Example:
 
 ```js
 var express = require('express')
-  , csv = require('express-csv')
+  , csvbig5 = require('express-csv-big5')
   , app = module.exports = express.createServer();
 
 app.get('/', function(req, res) {
-  res.csv([
+  res.csvbig5([
     ["a", "b", "c"]
   , ["d", "e", "f"]
   ]);
@@ -51,7 +53,7 @@ $ curl --verbose http://127.0.0.1:3000/
 > 
 < HTTP/1.1 200 OK
 < X-Powered-By: Express
-< Content-Type: text/csv; charset=utf-8
+< Content-Type: text/csv; charset=big5
 < Content-Length: 26
 < Connection: keep-alive
 < 
