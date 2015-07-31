@@ -1,5 +1,5 @@
 {
-  "name": "express-csv"
+  "name": "express-csv-big5"
 , "description": "express-csv provides response csv easily to express."
 , "version": "0.6.0"
 , "author": "Seiya Konno <nulltask@gmail.com>"
